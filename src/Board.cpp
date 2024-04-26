@@ -26,12 +26,7 @@ void Board::pretty_print() const
 	{
 		if (i == 0)
 		{
-			for (size_t z = 0; z < m_width; ++z)
-			{
-				if (z == 0) std::cout << ' ';
-				std::cout << '-';
-			}
-			std::cout << std::endl;
+			std::cout << '+' << std::string(m_width, '-') << '+' << std::endl;
 		}
 
 		for (size_t j = 0; j < m_width; ++j)
@@ -43,7 +38,7 @@ void Board::pretty_print() const
 
 			if (*(m_board + i * m_width + j) == 1)
 			{
-				std::cout << '#';					// Here we print real board state
+				std::cout << '#';					
 			} 
 			else
 			{
@@ -59,12 +54,7 @@ void Board::pretty_print() const
 
 		if (i == m_height - 1)
 		{
-			for (size_t z = 0; z < m_width; ++z)
-			{
-				if (z == 0) std::cout << ' ';
-				std::cout << '-';
-			}
-			std::cout << std::endl;
+			std::cout << '+' << std::string(m_width, '-') << '+' << std::endl;
 		}
 	}
 }
